@@ -4,9 +4,9 @@ import pandas as pd
 import os
 import firebase_admin
 from firebase_admin import credentials, auth
-from firebase_auth import verify_password
+from api.firebase_auth import verify_password
 from flask_sqlalchemy import SQLAlchemy
-from db_config import db, login_manager, User
+from api.db_config import db, login_manager, User
 import pickle
 from dotenv import load_dotenv
 from functools import wraps
