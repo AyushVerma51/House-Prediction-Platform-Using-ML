@@ -1,0 +1,271 @@
+2025-03-25 18:46:11,516 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 18:46:12,426 - INFO - Model loaded successfully
+2025-03-25 18:46:12,426 - INFO - Verifying model attributes...
+2025-03-25 18:46:12,426 - INFO - Model verification successful
+2025-03-25 18:46:13,552 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 18:46:14,308 - INFO - Model loaded successfully
+2025-03-25 18:46:14,308 - INFO - Verifying model attributes...
+2025-03-25 18:46:14,308 - INFO - Model verification successful
+2025-03-25 18:48:45,836 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 18:48:46,612 - INFO - Model loaded successfully
+2025-03-25 18:48:46,612 - INFO - Verifying model attributes...
+2025-03-25 18:48:46,613 - INFO - Model verification successful
+2025-03-25 18:48:47,679 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 18:48:48,462 - INFO - Model loaded successfully
+2025-03-25 18:48:48,462 - INFO - Verifying model attributes...
+2025-03-25 18:48:48,462 - INFO - Model verification successful
+2025-03-25 18:52:11,005 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 18:52:11,774 - INFO - Model loaded successfully
+2025-03-25 18:52:11,774 - INFO - Verifying model attributes...
+2025-03-25 18:52:11,774 - INFO - Model verification successful
+2025-03-25 18:52:12,869 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 18:52:13,721 - INFO - Model loaded successfully
+2025-03-25 18:52:13,721 - INFO - Verifying model attributes...
+2025-03-25 18:52:13,721 - INFO - Model verification successful
+2025-03-25 18:53:38,021 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 18:53:38,765 - INFO - Model loaded successfully
+2025-03-25 18:53:38,765 - INFO - Verifying model attributes...
+2025-03-25 18:53:38,765 - INFO - Model verification successful
+2025-03-25 18:53:39,847 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 18:53:40,718 - INFO - Model loaded successfully
+2025-03-25 18:53:40,718 - INFO - Verifying model attributes...
+2025-03-25 18:53:40,718 - INFO - Model verification successful
+2025-03-25 18:57:44,473 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 18:57:45,312 - INFO - Model loaded successfully
+2025-03-25 18:57:45,312 - INFO - Verifying model attributes...
+2025-03-25 18:57:45,312 - INFO - Model verification successful
+2025-03-25 18:57:46,337 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 18:57:47,106 - INFO - Model loaded successfully
+2025-03-25 18:57:47,106 - INFO - Verifying model attributes...
+2025-03-25 18:57:47,106 - INFO - Model verification successful
+2025-03-25 19:02:41,623 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:02:42,379 - INFO - Model loaded successfully
+2025-03-25 19:02:42,379 - INFO - Verifying model attributes...
+2025-03-25 19:02:42,379 - INFO - Model verification successful
+2025-03-25 19:02:43,526 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:02:44,279 - INFO - Model loaded successfully
+2025-03-25 19:02:44,280 - INFO - Verifying model attributes...
+2025-03-25 19:02:44,280 - INFO - Model verification successful
+2025-03-25 19:03:38,537 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:03:39,275 - INFO - Model loaded successfully
+2025-03-25 19:03:39,275 - INFO - Verifying model attributes...
+2025-03-25 19:03:39,276 - INFO - Model verification successful
+2025-03-25 19:04:10,519 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:04:11,291 - INFO - Model loaded successfully
+2025-03-25 19:04:11,291 - INFO - Verifying model attributes...
+2025-03-25 19:04:11,291 - INFO - Model verification successful
+2025-03-25 19:04:12,409 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:04:13,178 - INFO - Model loaded successfully
+2025-03-25 19:04:13,178 - INFO - Verifying model attributes...
+2025-03-25 19:04:13,178 - INFO - Model verification successful
+2025-03-25 19:08:00,556 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:08:01,271 - INFO - Model loaded successfully
+2025-03-25 19:08:01,271 - INFO - Verifying model attributes...
+2025-03-25 19:08:01,271 - INFO - Model verification successful
+2025-03-25 19:08:02,270 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:08:03,061 - INFO - Model loaded successfully
+2025-03-25 19:08:03,062 - INFO - Verifying model attributes...
+2025-03-25 19:08:03,062 - INFO - Model verification successful
+2025-03-25 19:10:53,751 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:10:54,503 - INFO - Model loaded successfully
+2025-03-25 19:10:54,503 - INFO - Verifying model attributes...
+2025-03-25 19:10:54,503 - INFO - Model verification successful
+2025-03-25 19:10:55,591 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:10:56,456 - INFO - Model loaded successfully
+2025-03-25 19:10:56,456 - INFO - Verifying model attributes...
+2025-03-25 19:10:56,456 - INFO - Model verification successful
+2025-03-25 19:14:45,031 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:14:45,881 - INFO - Model loaded successfully
+2025-03-25 19:14:45,881 - INFO - Verifying model attributes...
+2025-03-25 19:14:45,881 - INFO - Model verification successful
+2025-03-25 19:14:47,006 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:14:47,848 - INFO - Model loaded successfully
+2025-03-25 19:14:47,849 - INFO - Verifying model attributes...
+2025-03-25 19:14:47,849 - INFO - Model verification successful
+2025-03-25 19:17:02,364 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:17:03,113 - INFO - Model loaded successfully
+2025-03-25 19:17:03,113 - INFO - Verifying model attributes...
+2025-03-25 19:17:03,113 - INFO - Model verification successful
+2025-03-25 19:17:04,254 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:17:05,091 - INFO - Model loaded successfully
+2025-03-25 19:17:05,091 - INFO - Verifying model attributes...
+2025-03-25 19:17:05,091 - INFO - Model verification successful
+2025-03-25 19:17:46,578 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:17:47,339 - INFO - Model loaded successfully
+2025-03-25 19:17:47,339 - INFO - Verifying model attributes...
+2025-03-25 19:17:47,339 - INFO - Model verification successful
+2025-03-25 19:17:48,429 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:17:49,195 - INFO - Model loaded successfully
+2025-03-25 19:17:49,195 - INFO - Verifying model attributes...
+2025-03-25 19:17:49,195 - INFO - Model verification successful
+2025-03-25 19:18:15,018 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:18:15,766 - INFO - Model loaded successfully
+2025-03-25 19:18:15,766 - INFO - Verifying model attributes...
+2025-03-25 19:18:15,766 - INFO - Model verification successful
+2025-03-25 19:18:16,786 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:18:17,622 - INFO - Model loaded successfully
+2025-03-25 19:18:17,622 - INFO - Verifying model attributes...
+2025-03-25 19:18:17,622 - INFO - Model verification successful
+2025-03-25 19:19:55,235 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:19:55,974 - INFO - Model loaded successfully
+2025-03-25 19:19:55,974 - INFO - Verifying model attributes...
+2025-03-25 19:19:55,974 - INFO - Model verification successful
+2025-03-25 19:19:56,991 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:19:57,769 - INFO - Model loaded successfully
+2025-03-25 19:19:57,769 - INFO - Verifying model attributes...
+2025-03-25 19:19:57,769 - INFO - Model verification successful
+2025-03-25 19:20:36,108 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:20:36,937 - INFO - Model loaded successfully
+2025-03-25 19:20:36,937 - INFO - Verifying model attributes...
+2025-03-25 19:20:36,937 - INFO - Model verification successful
+2025-03-25 19:20:38,027 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:20:38,948 - INFO - Model loaded successfully
+2025-03-25 19:20:38,949 - INFO - Verifying model attributes...
+2025-03-25 19:20:38,949 - INFO - Model verification successful
+2025-03-25 19:23:13,888 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:23:15,155 - INFO - Model loaded successfully
+2025-03-25 19:23:15,155 - INFO - Verifying model attributes...
+2025-03-25 19:23:15,155 - INFO - Model verification successful
+2025-03-25 19:23:16,688 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:23:17,925 - INFO - Model loaded successfully
+2025-03-25 19:23:17,925 - INFO - Verifying model attributes...
+2025-03-25 19:23:17,925 - INFO - Model verification successful
+2025-03-25 19:25:14,737 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 19:25:15,764 - INFO - Model loaded successfully
+2025-03-25 19:25:15,765 - INFO - Verifying model attributes...
+2025-03-25 19:25:15,765 - INFO - Model verification successful
+2025-03-25 21:48:38,752 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 21:48:54,103 - INFO - Model loaded successfully
+2025-03-25 21:48:54,103 - INFO - Verifying model attributes...
+2025-03-25 21:48:54,103 - INFO - Model verification successful
+2025-03-25 21:48:56,088 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 21:48:57,147 - INFO - Model loaded successfully
+2025-03-25 21:48:57,147 - INFO - Verifying model attributes...
+2025-03-25 21:48:57,147 - INFO - Model verification successful
+2025-03-25 21:49:29,813 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 21:49:30,976 - INFO - Model loaded successfully
+2025-03-25 21:49:30,976 - INFO - Verifying model attributes...
+2025-03-25 21:49:30,976 - INFO - Model verification successful
+2025-03-25 21:49:32,550 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 21:49:33,838 - INFO - Model loaded successfully
+2025-03-25 21:49:33,838 - INFO - Verifying model attributes...
+2025-03-25 21:49:33,838 - INFO - Model verification successful
+2025-03-25 21:50:29,795 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 21:50:29,995 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 21:50:30,845 - INFO - Model loaded successfully
+2025-03-25 21:50:30,845 - INFO - Verifying model attributes...
+2025-03-25 21:50:30,845 - INFO - Model verification successful
+2025-03-25 21:50:31,079 - INFO - Model loaded successfully
+2025-03-25 21:50:31,080 - INFO - Verifying model attributes...
+2025-03-25 21:50:31,080 - INFO - Model verification successful
+2025-03-25 21:58:11,000 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 21:58:12,135 - INFO - Model loaded successfully
+2025-03-25 21:58:12,135 - INFO - Verifying model attributes...
+2025-03-25 21:58:12,135 - INFO - Model verification successful
+2025-03-25 21:58:13,622 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 21:58:14,644 - INFO - Model loaded successfully
+2025-03-25 21:58:14,644 - INFO - Verifying model attributes...
+2025-03-25 21:58:14,644 - INFO - Model verification successful
+2025-03-25 22:00:23,184 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:00:24,233 - INFO - Model loaded successfully
+2025-03-25 22:00:24,234 - INFO - Verifying model attributes...
+2025-03-25 22:00:24,234 - INFO - Model verification successful
+2025-03-25 22:00:25,662 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:00:26,797 - INFO - Model loaded successfully
+2025-03-25 22:00:26,797 - INFO - Verifying model attributes...
+2025-03-25 22:00:26,797 - INFO - Model verification successful
+2025-03-25 22:03:54,984 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:03:55,974 - INFO - Model loaded successfully
+2025-03-25 22:03:55,974 - INFO - Verifying model attributes...
+2025-03-25 22:03:55,974 - INFO - Model verification successful
+2025-03-25 22:04:13,322 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:04:14,526 - INFO - Model loaded successfully
+2025-03-25 22:04:14,526 - INFO - Verifying model attributes...
+2025-03-25 22:04:14,526 - INFO - Model verification successful
+2025-03-25 22:04:59,986 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:05:01,032 - INFO - Model loaded successfully
+2025-03-25 22:05:01,032 - INFO - Verifying model attributes...
+2025-03-25 22:05:01,032 - INFO - Model verification successful
+2025-03-25 22:05:35,985 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:05:36,998 - INFO - Model loaded successfully
+2025-03-25 22:05:36,999 - INFO - Verifying model attributes...
+2025-03-25 22:05:36,999 - INFO - Model verification successful
+2025-03-25 22:05:44,218 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:05:45,337 - INFO - Model loaded successfully
+2025-03-25 22:05:45,337 - INFO - Verifying model attributes...
+2025-03-25 22:05:45,337 - INFO - Model verification successful
+2025-03-25 22:06:44,334 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:06:45,401 - INFO - Model loaded successfully
+2025-03-25 22:06:45,402 - INFO - Verifying model attributes...
+2025-03-25 22:06:45,402 - INFO - Model verification successful
+2025-03-25 22:07:38,464 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:07:39,429 - INFO - Model loaded successfully
+2025-03-25 22:07:39,429 - INFO - Verifying model attributes...
+2025-03-25 22:07:39,429 - INFO - Model verification successful
+2025-03-25 22:13:23,835 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:13:24,852 - INFO - Model loaded successfully
+2025-03-25 22:13:24,852 - INFO - Verifying model attributes...
+2025-03-25 22:13:24,852 - INFO - Model verification successful
+2025-03-25 22:14:37,339 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:14:38,327 - INFO - Model loaded successfully
+2025-03-25 22:14:38,327 - INFO - Verifying model attributes...
+2025-03-25 22:14:38,327 - INFO - Model verification successful
+2025-03-25 22:16:06,790 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:16:07,932 - INFO - Model loaded successfully
+2025-03-25 22:16:07,933 - INFO - Verifying model attributes...
+2025-03-25 22:16:07,933 - INFO - Model verification successful
+2025-03-25 22:17:05,419 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:17:06,602 - INFO - Model loaded successfully
+2025-03-25 22:17:06,602 - INFO - Verifying model attributes...
+2025-03-25 22:17:06,602 - INFO - Model verification successful
+2025-03-25 22:21:05,793 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:21:06,834 - INFO - Model loaded successfully
+2025-03-25 22:21:06,834 - INFO - Verifying model attributes...
+2025-03-25 22:21:06,834 - INFO - Model verification successful
+2025-03-25 22:22:02,883 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:22:04,133 - INFO - Model loaded successfully
+2025-03-25 22:22:04,133 - INFO - Verifying model attributes...
+2025-03-25 22:22:04,133 - INFO - Model verification successful
+2025-03-25 22:22:16,353 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:22:17,462 - INFO - Model loaded successfully
+2025-03-25 22:22:17,462 - INFO - Verifying model attributes...
+2025-03-25 22:22:17,462 - INFO - Model verification successful
+2025-03-25 22:22:18,995 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:22:20,226 - INFO - Model loaded successfully
+2025-03-25 22:22:20,227 - INFO - Verifying model attributes...
+2025-03-25 22:22:20,227 - INFO - Model verification successful
+2025-03-25 22:24:05,712 - INFO - Received data: {'under_construction': 0, 'rera_approved': 1, 'resale': 0, 'ready_to_move': 1, 'BHK_OR_RK': 'BHK', 'BHK NO.': 2, 'SQUARE FT': 1000, 'address': 'Nalasopara (West),Mumbai', 'LONGITUDE': 18.96667, 'LATITUDE': 72.83333, 'POSTED_BY': '1'}
+2025-03-25 22:24:05,712 - INFO - Mapped input data: {'BHK_NO.': 2, 'SQUARE_FT': 1000, 'LONGITUDE': 18.96667, 'LATITUDE': 72.83333, 'POSTED_BY': 1, 'BHK_OR_RK': 1, 'UNDER_CONSTRUCTION': 0, 'RERA': 1, 'RESALE': 0, 'READY_TO_MOVE': 1}
+2025-03-25 22:24:05,714 - INFO - Input DataFrame for prediction:    POSTED_BY  UNDER_CONSTRUCTION  RERA  BHK_NO.  ...  READY_TO_MOVE  RESALE  LONGITUDE  LATITUDE
+0          1                   0     1        2  ...              1       0   18.96667  72.83333
+
+[1 rows x 10 columns]
+2025-03-25 22:24:05,730 - INFO - Prediction: 43.42306826518113
+2025-03-25 22:24:46,082 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:24:47,172 - INFO - Model loaded successfully
+2025-03-25 22:24:47,172 - INFO - Verifying model attributes...
+2025-03-25 22:24:47,172 - INFO - Model verification successful
+2025-03-25 22:24:56,104 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:24:57,348 - INFO - Model loaded successfully
+2025-03-25 22:24:57,348 - INFO - Verifying model attributes...
+2025-03-25 22:24:57,348 - INFO - Model verification successful
+2025-03-25 22:24:58,817 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 22:24:59,907 - INFO - Model loaded successfully
+2025-03-25 22:24:59,907 - INFO - Verifying model attributes...
+2025-03-25 22:24:59,907 - INFO - Model verification successful
+2025-03-25 23:11:22,866 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 23:11:23,874 - INFO - Model loaded successfully
+2025-03-25 23:11:23,874 - INFO - Verifying model attributes...
+2025-03-25 23:11:23,874 - INFO - Model verification successful
+2025-03-25 23:12:08,406 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 23:12:09,536 - INFO - Model loaded successfully
+2025-03-25 23:12:09,536 - INFO - Verifying model attributes...
+2025-03-25 23:12:09,536 - INFO - Model verification successful
+2025-03-25 23:14:12,964 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 23:14:13,960 - INFO - Model loaded successfully
+2025-03-25 23:14:13,961 - INFO - Verifying model attributes...
+2025-03-25 23:14:13,961 - INFO - Model verification successful
+2025-03-25 23:16:44,090 - INFO - Attempting to load model from: model/house_price_model.pkl
+2025-03-25 23:16:45,208 - INFO - Model loaded successfully
+2025-03-25 23:16:45,208 - INFO - Verifying model attributes...
+2025-03-25 23:16:45,208 - INFO - Model verification successful

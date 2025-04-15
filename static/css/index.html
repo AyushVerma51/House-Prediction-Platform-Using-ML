@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiscoverYourHome</title>
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <i class="fas fa-home-alt icon"></i>
+            DiscoverYourHome
+        </a>
+    </nav>
+
+    <main class="main-content">
+        <div class="header">
+            <img src="https://media.cnn.com/api/v1/images/stellar/prod/200310023921-dubai-buildings-skyline.jpg?q=w_3000,h_1688,x_0,y_0,c_fill" alt="Modern apartment" class="floating-image image-1">
+            <img src="https://media.istockphoto.com/id/511061090/photo/business-office-building-in-london-england.jpg?s=612x612&w=0&k=20&c=nYAn4JKoCqO1hMTjZiND1PAIWoABuy1BwH1MhaEoG6w=" alt="Luxury home" class="floating-image image-2">
+            <h1>Predict House Prices</h1>
+            <p>Get accurate house price predictions using our advanced model. <br>Enter your property details below.</p>
+        </div>
+
+        <div class="form-container">
+            <form id="prediction-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label><i class="fas fa-hard-hat icon"></i> Under Construction</label>
+                        <select class="form-control" name="under_construction">
+                            <option value="">Select status</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+            
+                    <div class="form-group">
+                        <label><i class="fas fa-certificate icon"></i> RERA Approved</label>
+                        <select class="form-control" name="rera_approved">
+                            <option value="">Select status</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+            
+                    <div class="form-group">
+                        <label><i class="fas fa-exchange-alt icon"></i> Resale</label>
+                        <select class="form-control" name="resale">
+                            <option value="">Select status</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+            
+                    <div class="form-group">
+                        <label><i class="fas fa-key icon"></i> Ready to Move</label>
+                        <select class="form-control" name="ready_to_move">
+                            <option value="">Select status</option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+            
+                    <div class="form-group">
+                        <label><i class="fas fa-bed icon"></i> BHK Number</label>
+                        <input type="number" class="form-control" name="BHK NO." placeholder="e.g. 2" min="1" max="10">
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-home icon"></i> BHK or RK</label>
+                        <select class="form-control" name="BHK_OR_RK" required>
+                            <option value="">Select type</option>
+                            <option value="BHK">BHK</option>
+                            <option value="RK">RK</option>
+                        </select>
+                    </div>
+            
+                    <div class="form-group">
+                        <label><i class="fas fa-ruler-combined icon"></i> Area (sq ft)</label>
+                        <input type="number" class="form-control" name="SQUARE FT" placeholder="e.g. 1000" min="100" required>
+                        <small>Enter the total carpet area in square feet</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fas fa-map-marker-alt icon"></i> Address</label>
+                        <input type="text" class="form-control" name="address" placeholder="Enter complete address">
+                    </div>
+            
+                    <div class="form-group">
+                        <label><i class="fas fa-location-arrow icon"></i> Longitude</label>
+                        <input type="number" class="form-control" name="LONGITUDE" placeholder="e.g. 20.448627" step="any">
+                    </div>
+            
+                    <div class="form-group">
+                        <label><i class="fas fa-location-arrow icon"></i> Latitude</label>
+                        <input type="number" class="form-control" name="LATITUDE" placeholder="e.g. 85.897743" step="any">
+                    </div>
+            
+                    <div class="form-group">
+                        <label><i class="fas fa-user icon"></i> Posted By</label>
+                        <select class="form-control" name="POSTED_BY">
+                            <option value="">Select type</option>
+                            <option value="1">Owner</option>
+                            <option value="2">Dealer</option>
+                            <option value="3">Builder</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <button type="submit" class="predict-button">
+                    <i class="fas fa-calculator"></i>
+                    Predict Price
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

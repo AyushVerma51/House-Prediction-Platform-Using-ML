@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Filters</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/filters.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="#" class="logo navbar-brand">
+            <i class="fas fa-home-alt icon"></i>
+            DiscoverYourHome
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="filters-container">
+            <div class="filters-header">
+                <div class="filters-title">
+                    <a href="/home" class="back-button"><i class="fas fa-arrow-left"></i></a>
+                    <h2>Filters <span class="filter-count">(0)</span></h2>
+                </div>
+                <button id="reset-filters" class="reset-button">Reset</button>
+            </div>
+
+            <!-- Transaction Type Tabs -->
+            <div class="transaction-tabs">
+                <button class="tab-button active" data-value="Buy">Buy</button>
+                
+            </div>
+
+            <!-- City/Localities Selection -->
+            <div class="filter-section">
+                <h3>Select City/Localities</h3>
+                <div class="city-selection">
+                    <div class="selected-cities" id="selected-cities">
+                        <!-- Selected cities will be added here as chips -->
+                    </div>
+                    <div class="city-input-container">
+                        <input type="text" id="city-search" placeholder="Search for city or locality" class="form-control">
+                        <button id="add-city" class="add-button"><i class="fas fa-plus"></i> Add More</button>
+                    </div>
+                    <div id="city-suggestions" class="city-suggestions"></div>
+                </div>
+            </div>
+
+            <!-- Budget Range -->
+            <div class="filter-section">
+                <h3>Budget</h3>
+                <div class="budget-inputs">
+                    <div class="select-wrapper">
+                        <select id="min-budget" class="form-control">
+                            <option value="">Min</option>
+                            <option value="500000">5 Lacs</option>
+                            <option value="1000000">10 Lacs</option>
+                            <option value="2000000">20 Lacs</option>
+                            <option value="3000000">30 Lacs</option>
+                            <option value="5000000">50 Lacs</option>
+                            <option value="10000000">1 Cr</option>
+                            <option value="20000000">2 Cr</option>
+                        </select>
+                    </div>
+                    <span class="to-text">to</span>
+                    <div class="select-wrapper">
+                        <select id="max-budget" class="form-control">
+                            <option value="">Max</option>
+                            <option value="1000000">10 Lacs</option>
+                            <option value="2000000">20 Lacs</option>
+                            <option value="3000000">30 Lacs</option>
+                            <option value="5000000">50 Lacs</option>
+                            <option value="10000000">1 Cr</option>
+                            <option value="20000000">2 Cr</option>
+                            <option value="30000000">3 Cr</option>
+                            <option value="50000000">5 Cr+</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="range-slider-container">
+                    <input type="range" min="0" max="100" value="0" class="range-slider" id="min-range">
+                    <input type="range" min="0" max="100" value="100" class="range-slider" id="max-range">
+                </div>
+            </div>
+
+            <!-- Property Type -->
+            <div class="filter-section">
+                <h3>Property Type</h3>
+                <div class="property-types">
+                    <div class="property-type-option" data-value="Flat">
+                        <div class="property-icon"><i class="fas fa-building"></i></div>
+                        <div class="property-label">Flat</div>
+                    </div>
+                    <div class="property-type-option" data-value="House/Villa">
+                        <div class="property-icon"><i class="fas fa-home"></i></div>
+                        <div class="property-label">House/Villa</div>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <!-- BHK Selection -->
+            <div class="filter-section">
+                <h3>BHK</h3>
+                <div class="bhk-options">
+                    <div class="bhk-option" data-value="1">
+                        <i class="fas fa-plus"></i> 1 BHK
+                    </div>
+                    <div class="bhk-option" data-value="2">
+                        <i class="fas fa-check"></i> 2 BHK
+                    </div>
+                    <div class="bhk-option" data-value="3">
+                        <i class="fas fa-check"></i> 3 BHK
+                    </div>
+                    <div class="bhk-option" data-value="4">
+                        <i class="fas fa-plus"></i> 4 BHK
+                    </div>
+                    <div class="bhk-option" data-value="5+">
+                        <i class="fas fa-plus"></i> 5+ BHK
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- Apply Filters Button -->
+            <div class="apply-filters-button">
+                <button id="apply-filters">View Properties</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/filters.js') }}"></script>
+</body>
+</html>

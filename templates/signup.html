@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - DiscoverYourHome</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <style>
+      body {
+        background-color: #333;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        background: rgba(45, 45, 45, 0.5);
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        font-weight: bold;
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .navbar .navbar-brand {
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+      }
+      .navbar .navbar-brand i {
+        margin-right: 8px;
+      }
+      .form-container {
+        background-color: #444;
+        color: white;
+        padding: 30px;
+        border: 2px solid #555;
+        border-radius: 10px;
+        width: 400px;
+        text-align: center;
+        margin: 50px auto;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-control {
+        background-color: #555;
+        color: white;
+      }
+      .form-control::placeholder {
+        color: #bbb;
+      }
+      .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+      .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
+      .mt-3 {
+        margin-top: 20px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/" class="navbar-brand">
+        <i class="fas fa-home-alt icon"></i>
+        DiscoverYourHome
+      </a>
+    </nav>
+    <div class="form-container">
+      <h2>Sign Up</h2>
+      <form
+        id="signupForm"
+        method="POST"
+        action="/signup"
+        onsubmit="signup(event)"
+      >
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            name="username"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            required
+          />
+        </div>
+        <input type="hidden" id="idToken" name="idToken" />
+        <div id="error" class="alert alert-danger" style="display: none"></div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
+    </div>
+
+    <script>
+      // Load environment variables
+      async function loadEnvVariables() {
+        const response = await fetch("/env-config");
+        return await response.json();
+      }
+    </script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-auth.js";
+
+      // Load environment variables before initializing Firebase
+      const envVars = await loadEnvVariables();
+
+      const firebaseConfig = {
+        apiKey: envVars.FIREBASE_API_KEY,
+        authDomain: envVars.FIREBASE_AUTH_DOMAIN,
+        projectId: envVars.FIREBASE_PROJECT_ID,
+        storageBucket: envVars.FIREBASE_STORAGE_BUCKET,
+        messagingSenderId: envVars.FIREBASE_MESSAGING_SENDER_ID,
+        appId: envVars.FIREBASE_APP_ID,
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+
+      async function signup(event) {
+        event.preventDefault();
+        const email = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        try {
+          await createUserWithEmailAndPassword(auth, email, password);
+
+          const userCredential = await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+          );
+          const idToken = await userCredential.user.getIdToken();
+          document.getElementById("idToken").value = idToken;
+          document.getElementById("signupForm").submit();
+        } catch (error) {
+          console.error("Error during signup:", error);
+          document.getElementById("error").innerText = error.message;
+          document.getElementById("error").style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

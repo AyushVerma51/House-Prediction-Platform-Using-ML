@@ -1,0 +1,297 @@
+/* Filters CSS */
+.filters-container {
+    background: rgba(45, 45, 45, 0.3);
+    padding: 1.5rem;
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.filters-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.filters-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.filters-title h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.filter-count {
+    color: #b0b0b0;
+    font-weight: normal;
+}
+
+.back-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.reset-button {
+    color: #ff4a9e;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+/* Transaction Tabs */
+.transaction-tabs {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.tab-button.active {
+    color: #ff4a9e;
+    border-bottom: 2px solid #ff4a9e;
+}
+
+/* Filter Sections */
+.filter-section {
+    margin-bottom: 2rem;
+}
+
+.filter-section h3 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* City Selection */
+.city-selection {
+    position: relative;
+}
+
+.selected-cities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.city-chip {
+    background: rgba(74, 158, 255, 0.2);
+    border: 1px solid rgba(74, 158, 255, 0.5);
+    border-radius: 100px;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.remove-city {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.city-input-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.add-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.city-suggestions {
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background: #1a1a1a;
+    border-radius: 12px;
+    margin-top: 0.5rem;
+    display: none;
+    z-index: 10;
+}
+
+.city-suggestion {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+}
+
+.city-suggestion:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Budget Range */
+.budget-inputs {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.to-text {
+    color: #b0b0b0;
+}
+
+.select-wrapper {
+    flex: 1;
+}
+
+.range-slider-container {
+    position: relative;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    margin: 1.5rem 0;
+}
+
+.range-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 0;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+}
+
+.range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #4a9eff;
+    cursor: pointer;
+    pointer-events: auto;
+    margin-top: -7px;
+}
+
+/* Property Types */
+.property-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.property-type-option {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.property-type-option.selected {
+    background: rgba(74, 158, 255, 0.1);
+    border-color: #4a9eff;
+}
+
+.property-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #4a9eff;
+}
+
+/* BHK Options */
+.bhk-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.bhk-option {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bhk-option.selected {
+    background: rgba(74, 158, 255, 0.1);
+    border-color: #4a9eff;
+}
+
+.bhk-option i {
+    font-size: 0.8rem;
+}
+
+/* Advanced Filters */
+.advanced-filters-button {
+    margin-bottom: 1.5rem;
+}
+
+.advanced-filters-button button {
+    width: 100%;
+    padding: 1rem;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ff4a9e;
+    border-radius: 12px;
+    font-family: "Space Grotesk", sans-serif;
+    cursor: pointer;
+}
+
+/* Apply Filters Button */
+.apply-filters-button button {
+    width: 100%;
+    padding: 1.25rem;
+    background: linear-gradient(135deg, #4a9eff, #ff4a9e);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.apply-filters-button button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(74, 158, 255, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .property-types {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

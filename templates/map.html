@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price Prediction Map</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      #map {
+        height: 500px;
+        width: 100%;
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .prediction-card {
+        background-color: #f5f5f5;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border-left: 4px solid #4caf50;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .price {
+        font-size: 24px;
+        font-weight: bold;
+        color: #4caf50;
+      }
+      .address {
+        margin-top: 8px;
+        color: #555;
+      }
+      h2 {
+        color: #333;
+        margin-top: 0;
+      }
+      .loading {
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+        color: #666;
+      }
+      .error-message {
+        background-color: #ffeeee;
+        color: #dd3333;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>House Price Prediction Map</h2>
+
+    <div id="errorMessage" class="error-message"></div>
+
+    <div id="predictionResult" class="prediction-card" style="display: none">
+      <div>Predicted Price: <span id="priceValue" class="price"></span></div>
+      <div class="address">Address: <span id="addressValue"></span></div>
+    </div>
+
+    <div id="loadingIndicator" class="loading">Loading map...</div>
+    <div id="map"></div>
+
+    <script>
+      // Initialize variables
+      let map;
+      let marker;
+      let markerLayer;
+      let isMapInitialized = false;
+
+      // Initialize the map
+      function initMap() {
+        if (isMapInitialized) return;
+
+        // Create map centered on India
+        map = L.map("map").setView([20.5937, 78.9629], 5);
+
+        // Add tile layer (map background)
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution: "© OpenStreetMap contributors",
+          maxZoom: 19,
+        }).addTo(map);
+
+        // Create layer for markers
+        markerLayer = L.layerGroup().addTo(map);
+
+        // Hide loading indicator
+        document.getElementById("loadingIndicator").style.display = "none";
+
+        isMapInitialized = true;
+      }
+
+      // Show error message
+      function showError(message) {
+        const errorElement = document.getElementById("errorMessage");
+        errorElement.textContent = message;
+        errorElement.style.display = "block";
+        setTimeout(() => {
+          errorElement.style.display = "none";
+        }, 5000);
+      }
+
+      // Function to check for prediction data passed from parent window
+      function checkForPredictionData() {
+        try {
+          // Try to get data from URL parameters
+          const urlParams = new URLSearchParams(window.location.search);
+          const latitude = urlParams.get("lat");
+          const longitude = urlParams.get("lng");
+          const price = urlParams.get("price");
+          const address = urlParams.get("address");
+
+          if (latitude && longitude) {
+            showPrediction(latitude, longitude, price, address);
+            return true;
+          }
+
+          // Try to get data from localStorage
+          const storedLat = localStorage.getItem("predictedLat");
+          const storedLng = localStorage.getItem("predictedLng");
+          const storedPrice = localStorage.getItem("predictedPrice");
+          const storedAddress = localStorage.getItem("predictedAddress");
+
+          if (storedLat && storedLng) {
+            showPrediction(storedLat, storedLng, storedPrice, storedAddress);
+            // Clear localStorage after using it
+            localStorage.removeItem("predictedLat");
+            localStorage.removeItem("predictedLng");
+            localStorage.removeItem("predictedPrice");
+            localStorage.removeItem("predictedAddress");
+            return true;
+          }
+
+          return false;
+        } catch (error) {
+          console.error("Error checking prediction data:", error);
+          showError("Error loading prediction data");
+          return false;
+        }
+      }
+
+      // Function to display prediction on map
+      function showPrediction(lat, lng, price, address) {
+        try {
+          // Initialize map if not already done
+          initMap();
+
+          // Convert to float to ensure proper mapping
+          lat = parseFloat(lat);
+          lng = parseFloat(lng);
+
+          if (isNaN(lat) || isNaN(lng)) {
+            console.error("Invalid coordinates:", lat, lng);
+            showError("Invalid coordinates provided");
+            return;
+          }
+
+          // Show the prediction card
+          const predictionResult = document.getElementById("predictionResult");
+          predictionResult.style.display = "block";
+
+          // Update prediction values
+          if (price) {
+            document.getElementById("priceValue").textContent =
+              "₹" + parseFloat(price).toLocaleString() + " Lacs";
+          } else {
+            document.getElementById("priceValue").textContent = "Not Available";
+          }
+
+          if (address) {
+            document.getElementById("addressValue").textContent = address;
+          } else {
+            document.getElementById(
+              "addressValue"
+            ).textContent = `Coordinates: ${lat}, ${lng}`;
+          }
+
+          // Clear previous markers
+          markerLayer.clearLayers();
+
+          // Add new marker
+          marker = L.marker([lng, lat]).addTo(markerLayer);
+
+          // Add popup with prediction info
+          let popupContent = `<strong>Predicted Price: ${
+            price ? "₹" + parseFloat(price).toLocaleString() + " Lacs" : "N/A"
+          }</strong>`;
+          if (address) {
+            popupContent += `<br>${address}`;
+          }
+          marker.bindPopup(popupContent).openPopup();
+
+          // Center map on marker
+          map.setView([lng, lat], 15);
+        } catch (error) {
+          console.error("Error showing prediction:", error);
+          showError("Error displaying prediction on map");
+        }
+      }
+
+      // Load any house data if available
+      async function loadHouseData() {
+        try {
+          initMap();
+
+          const response = await fetch("/house-data");
+          if (!response.ok) {
+            throw new Error("Failed to fetch house data");
+          }
+
+          const data = await response.json();
+          if (data.houses && data.houses.length > 0) {
+            // Add houses to map as small markers
+            data.houses.forEach((house) => {
+              const lat = parseFloat(house.latitude);
+              const lng = parseFloat(house.longitude);
+
+              if (!isNaN(lat) && !isNaN(lng)) {
+                const smallMarker = L.circleMarker([lat, lng], {
+                  radius: 4,
+                  fillColor: "#3388ff",
+                  color: "#fff",
+                  weight: 1,
+                  opacity: 1,
+                  fillOpacity: 0.8,
+                }).addTo(map);
+
+                smallMarker.bindPopup(house.address);
+              }
+            });
+          }
+        } catch (error) {
+          console.error("Error loading house data:", error);
+          // Don't show error for this - it's optional data
+        }
+      }
+
+      // Check for prediction data on page load
+      window.addEventListener("DOMContentLoaded", function () {
+        // Initialize map with delay to ensure DOM is fully loaded
+        setTimeout(initMap, 500);
+
+        // Check for prediction data
+        const hasPredictionData = checkForPredictionData();
+
+        // If no prediction data, load house data
+        if (!hasPredictionData) {
+          loadHouseData();
+        }
+
+        // Listen for message from parent window
+        window.addEventListener("message", function (event) {
+          if (event.data && event.data.type === "prediction") {
+            showPrediction(
+              event.data.latitude,
+              event.data.longitude,
+              event.data.price,
+              event.data.address
+            );
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

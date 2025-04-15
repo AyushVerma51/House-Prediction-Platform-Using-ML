@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Results - DiscoverYourHome</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/properties.css') }}"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a href="#" class="logo navbar-brand">
+        <i class="fas fa-home-alt icon"></i>
+        DiscoverYourHome
+      </a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/filters">Filters</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <div class="results-header">
+        <div class="results-title">
+          <a href="/filters" class="back-button"
+            ><i class="fas fa-arrow-left"></i
+          ></a>
+          <h2>
+            Properties
+            <span id="property-count" class="property-count"
+              >({{ property_count }})</span
+            >
+          </h2>
+        </div>
+        <div class="results-actions">
+          <button id="map-view-btn" class="view-toggle-button">
+            <i class="fas fa-map-marked-alt"></i> Map View
+          </button>
+          <button
+            id="filter-btn"
+            class="filter-button"
+            onclick="window.location.href='/filters'"
+          >
+            <i class="fas fa-sliders-h"></i> Filters
+          </button>
+          <div class="sort-dropdown">
+            <button id="sort-btn" class="sort-button">
+              <i class="fas fa-sort"></i> Sort By
+            </button>
+            <div id="sort-options" class="sort-options">
+              <div class="sort-option" data-sort="price-asc">
+                Price: Low to High
+              </div>
+              <div class="sort-option" data-sort="price-desc">
+                Price: High to Low
+              </div>
+              <div class="sort-option" data-sort="area-asc">
+                Area: Small to Large
+              </div>
+              <div class="sort-option" data-sort="area-desc">
+                Area: Large to Small
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="view-container">
+        <!-- List View (default) -->
+        <div id="list-view" class="property-results">
+          <div
+            id="loading-indicator"
+            class="loading-indicator"
+            style="display: none"
+          >
+            <i class="fas fa-spinner fa-spin"></i> Loading properties...
+          </div>
+          <div
+            id="no-results"
+            class="no-results"
+            style="display: {{ 'block' if property_count == 0 else 'none' }};"
+          >
+            <div class="no-results-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3>No properties found</h3>
+            <p>Try adjusting your filters to see more results</p>
+            <a href="/filters" class="modify-filters-btn">Modify Filters</a>
+          </div>
+          <div id="properties-container" class="properties-container">
+            <!-- Property cards will be populated by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Map View (toggled) -->
+        <div id="map-view" class="map-view" style="display: none">
+          <iframe
+            id="mapFrame"
+            src="/map"
+            style="width: 100%; height: 100%; border: none"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+
+    <!-- Pass initial data to JavaScript -->
+    <script>
+      window.initialProperties = {{ initial_properties | tojson | safe }};
+      window.filterState = {{ filter_state | tojson | safe }};
+    </script>
+    <script src="{{ url_for('static', filename='js/properties.js') }}"></script>
+  </body>
+</html>
